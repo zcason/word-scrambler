@@ -1,0 +1,15 @@
+.random-word {
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: #4682b4;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.score {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+}
