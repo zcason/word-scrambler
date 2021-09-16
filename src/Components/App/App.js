@@ -5,7 +5,8 @@ import InputField from '../InputField/InputField';
 import './App.css';
 
 function App() {
-  const [sentenceNumber, setSentenceNumber] = useState(1);
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+  const [sentenceNumber, setSentenceNumber] = useState(randomNumber);
   const [sentence, setSentence] = useState('');
 
   useEffect(() => {
@@ -20,13 +21,13 @@ function App() {
       }  
     };
     initFetch();
-  }, []);
+  }, [sentenceNumber]);
 
 
   return (
     <div className="App">
       <WordSection sentence={sentence} />
-      <InputField/>
+      <InputField sentenceArray={sentence.split('')}/>
     </div>
   );
 }
